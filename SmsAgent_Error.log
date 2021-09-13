@@ -1,0 +1,4 @@
+2021-09-13T03:53:22.111+00:00 - ERROR - Thread-3 - agentcliserver.py - run - [line:58] - a cli client exist
+Traceback (most recent call last):
+  File "sms/view/cli/agentcliserver.py", line 56, in run
+BrokenPipeError: [Errno 32] Broken pipe

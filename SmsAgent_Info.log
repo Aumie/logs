@@ -1,0 +1,311 @@
+2021-09-13T03:29:29.054+00:00 - INFO - MainThread - sms_agent_cmd.py - <module> - [line:341] - start agent....
+2021-09-13T03:29:29.078+00:00 - INFO - MainThread - sms_agent_cmd.py - _manual_start - [line:158] - agent will start by manual
+2021-09-13T03:29:29.079+00:00 - INFO - MainThread - sms_agent_cmd.py - _manual_start - [line:160] - start to verify as/sk from sms
+2021-09-13T03:29:29.714+00:00 - INFO - MainThread - sms_agent_cmd.py - _manual_start - [line:162] - verify as/sk from sms result: True
+2021-09-13T03:29:29.715+00:00 - INFO - MainThread - taskutil.py - get_system_info - [line:48] - start to collect os info
+2021-09-13T03:29:29.716+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:['bash', 'linux/resources/shell/get_os_info.sh', 'os']
+2021-09-13T03:29:29.892+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:['bash', 'linux/resources/shell/get_os_info.sh', 'os']
+2021-09-13T03:29:29.893+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_os_version - [line:64] - os version:UBUNTU_20_4_64BIT
+2021-09-13T03:29:29.893+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:['uname', '-r']
+2021-09-13T03:29:29.896+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:['uname', '-r']
+2021-09-13T03:29:29.897+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_kernel_version - [line:84] - linux_block_check kernel version:5.4.0-1045-aws
+2021-09-13T03:29:29.897+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_virtualization_type - [line:94] - virtualization type:HVM
+2021-09-13T03:29:29.898+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:['df', '-THP']
+2021-09-13T03:29:29.901+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:['df', '-THP']
+2021-09-13T03:29:29.901+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_firmware - [line:116] - system is booted with bios!
+2021-09-13T03:29:29.905+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_raw_devices - [line:127] - failed to get raw devcie info
+2021-09-13T03:29:29.905+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:['rsync', '--version']
+2021-09-13T03:29:29.917+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:['rsync', '--version']
+2021-09-13T03:29:29.918+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_rsync - [line:145] - rsync exist
+2021-09-13T03:29:29.921+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_boot_loader - [line:150] - boot loader:GRUB
+2021-09-13T03:29:29.922+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:bash linux/resources/shell/get_disk_info.sh
+2021-09-13T03:29:30.358+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:bash linux/resources/shell/get_disk_info.sh
+2021-09-13T03:29:30.359+00:00 - INFO - MainThread - linux_disk_parser.py - parse_disk_info - [line:46] - disk info:
+ <DISK_INFO> /dev/xvda:8388608:MBR<DISK_INFO>
+<VOL_INFO> /dev/xvda1:8387567:ext4<VOL_INFO>
+<PV_INFO><PV_INFO>
+<VG_INFO><VG_INFO>
+<LV_INFO><LV_INFO>
+<VOL_MAP_INFO> /dev/xvda=/dev/xvda1<VOL_MAP_INFO>
+<BTRFS_INFO><BTRFS_INFO>
+<SUB_INFO><SUB_INFO>
+
+2021-09-13T03:29:30.359+00:00 - INFO - MainThread - linux_disk_parser.py - _filter_disk_list - [line:365] - Disk /dev/xvda is filtered out for no vol is used
+2021-09-13T03:29:30.360+00:00 - INFO - MainThread - linux_disk_parser.py - _find_system_disk_name - [line:434] - system disk:None
+2021-09-13T03:29:30.361+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:cat /proc/cpuinfo| grep "processor"
+2021-09-13T03:29:30.365+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:cat /proc/cpuinfo| grep "processor"
+2021-09-13T03:29:30.366+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_cpu_info - [line:221] - cpu_quantity:1
+2021-09-13T03:29:30.366+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:cat /proc/meminfo|grep -i MemTotal
+2021-09-13T03:29:30.371+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:cat /proc/meminfo|grep -i MemTotal
+2021-09-13T03:29:30.371+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_memory_info - [line:240] - memory size:1026101248
+2021-09-13T03:29:30.372+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_network_info - [line:262] - routingNicMacAddr 02-AA-86-0B-BD-66
+2021-09-13T03:29:30.372+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_network_info - [line:266] - hash routingNicMacAddr 32eda4824f5e8d1bc25f8952d03ddd98f00ab73bd263b4400bc19cc6b8934334
+2021-09-13T03:29:30.372+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_network_info - [line:272] - mac: 32eda4824f5e8d1bc25f8952d03ddd98f00ab73bd263b4400bc19cc6b8934334
+2021-09-13T03:29:30.373+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:bash linux/resources/shell/check_grub.sh
+2021-09-13T03:29:30.405+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:bash linux/resources/shell/check_grub.sh
+2021-09-13T03:29:30.405+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:ssh -V
+2021-09-13T03:29:30.426+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:ssh -V
+2021-09-13T03:29:30.427+00:00 - INFO - MainThread - taskutil.py - get_system_info - [line:60] - successfully collect os info:{"os_type": "LINUX", "name": "ip-172-31-26-6", "os_version": "UBUNTU_20_4_64BIT", "linux_block_check": "5.4.0-1045-aws", "support_linux_block": false, "kernel_version": "5.4.0-1045-aws", "paravirtualization": true, "firmware": "BIOS", "has_rsync": true, "boot_loader": "GRUB", "disks": [], "volume_groups": [], "btrfs_list": [], "cpu_quantity": 1, "memory": 1026101248, "networks": [{"name": "eth0", "ip": "172.31.26.6", "mac": "32eda4824f5e8d1bc25f8952d03ddd98f00ab73bd263b4400bc19cc6b8934334"}], "ip": "172.31.26.6", "agent_version": "3.0.3", "enterprise_project_id": "0"}
+2021-09-13T03:29:30.427+00:00 - INFO - MainThread - OpenStackPlatformManager.py - upload_source_info - [line:530] - start to upload os info
+2021-09-13T03:29:31.644+00:00 - INFO - MainThread - OpenStackPlatformManager.py - upload_source_info - [line:544] - successfully upload os info, source_id: 18b02df1-8791-408c-b455-67c7957ab1e3
+2021-09-13T03:29:31.645+00:00 - INFO - MainThread - sms_heartbeat.py - _start_schedule_task - [line:54] - start schedule task which gets command from SMS
+2021-09-13T03:29:31.645+00:00 - INFO - heart_beat_monitor - sms_heartbeat_monitor.py - run - [line:28] - start heart beat monitor thread
+2021-09-13T03:29:31.646+00:00 - INFO - heart_beat_monitor - sms_heartbeat_monitor.py - run - [line:38] - heart beat monitor has count to: 0
+2021-09-13T03:29:31.647+00:00 - INFO - agent_ctrl_daemon - agentcliserver.py - _linux_daemon_thread - [line:120] - start agent control daemon thread
+2021-09-13T03:39:31.749+00:00 - INFO - heart_beat_monitor - sms_heartbeat_monitor.py - run - [line:38] - heart beat monitor has count to: 1
+2021-09-13T03:39:31.757+00:00 - INFO - heart_beat_monitor - sms_heartbeat_monitor.py - run - [line:41] - heart beat monitor has count to: 1
+2021-09-13T03:39:31.757+00:00 - INFO - heart_beat_monitor - taskutil.py - get_system_info - [line:48] - start to collect os info
+2021-09-13T03:39:31.758+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:['bash', 'linux/resources/shell/get_os_info.sh', 'os']
+2021-09-13T03:39:31.934+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:['bash', 'linux/resources/shell/get_os_info.sh', 'os']
+2021-09-13T03:39:31.935+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_os_version - [line:64] - os version:UBUNTU_20_4_64BIT
+2021-09-13T03:39:31.935+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:['uname', '-r']
+2021-09-13T03:39:31.938+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:['uname', '-r']
+2021-09-13T03:39:31.941+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_kernel_version - [line:84] - linux_block_check kernel version:5.4.0-1045-aws
+2021-09-13T03:39:31.941+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_virtualization_type - [line:94] - virtualization type:HVM
+2021-09-13T03:39:31.941+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:['df', '-THP']
+2021-09-13T03:39:31.944+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:['df', '-THP']
+2021-09-13T03:39:31.945+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_firmware - [line:116] - system is booted with bios!
+2021-09-13T03:39:31.948+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_raw_devices - [line:127] - failed to get raw devcie info
+2021-09-13T03:39:31.949+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:['rsync', '--version']
+2021-09-13T03:39:31.956+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:['rsync', '--version']
+2021-09-13T03:39:31.957+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_rsync - [line:145] - rsync exist
+2021-09-13T03:39:31.961+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_boot_loader - [line:150] - boot loader:GRUB
+2021-09-13T03:39:31.961+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:bash linux/resources/shell/get_disk_info.sh
+2021-09-13T03:39:32.380+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:bash linux/resources/shell/get_disk_info.sh
+2021-09-13T03:39:32.381+00:00 - INFO - heart_beat_monitor - linux_disk_parser.py - parse_disk_info - [line:46] - disk info:
+ <DISK_INFO> /dev/xvda:8388608:MBR<DISK_INFO>
+<VOL_INFO> /dev/xvda1:8387567:ext4<VOL_INFO>
+<PV_INFO><PV_INFO>
+<VG_INFO><VG_INFO>
+<LV_INFO><LV_INFO>
+<VOL_MAP_INFO> /dev/xvda=/dev/xvda1<VOL_MAP_INFO>
+<BTRFS_INFO><BTRFS_INFO>
+<SUB_INFO><SUB_INFO>
+
+2021-09-13T03:39:32.381+00:00 - INFO - heart_beat_monitor - linux_disk_parser.py - _filter_disk_list - [line:365] - Disk /dev/xvda is filtered out for no vol is used
+2021-09-13T03:39:32.382+00:00 - INFO - heart_beat_monitor - linux_disk_parser.py - _find_system_disk_name - [line:434] - system disk:None
+2021-09-13T03:39:32.382+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:cat /proc/cpuinfo| grep "processor"
+2021-09-13T03:39:32.387+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:cat /proc/cpuinfo| grep "processor"
+2021-09-13T03:39:32.387+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_cpu_info - [line:221] - cpu_quantity:1
+2021-09-13T03:39:32.387+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:cat /proc/meminfo|grep -i MemTotal
+2021-09-13T03:39:32.392+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:cat /proc/meminfo|grep -i MemTotal
+2021-09-13T03:39:32.393+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_memory_info - [line:240] - memory size:1026101248
+2021-09-13T03:39:32.395+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_network_info - [line:262] - routingNicMacAddr 02-AA-86-0B-BD-66
+2021-09-13T03:39:32.395+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_network_info - [line:266] - hash routingNicMacAddr 32eda4824f5e8d1bc25f8952d03ddd98f00ab73bd263b4400bc19cc6b8934334
+2021-09-13T03:39:32.396+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_network_info - [line:272] - mac: 32eda4824f5e8d1bc25f8952d03ddd98f00ab73bd263b4400bc19cc6b8934334
+2021-09-13T03:39:32.397+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:bash linux/resources/shell/check_grub.sh
+2021-09-13T03:39:32.429+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:bash linux/resources/shell/check_grub.sh
+2021-09-13T03:39:32.429+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:ssh -V
+2021-09-13T03:39:32.456+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:ssh -V
+2021-09-13T03:39:32.457+00:00 - INFO - heart_beat_monitor - taskutil.py - get_system_info - [line:60] - successfully collect os info:{"os_type": "LINUX", "name": "ip-172-31-26-6", "os_version": "UBUNTU_20_4_64BIT", "linux_block_check": "5.4.0-1045-aws", "support_linux_block": false, "kernel_version": "5.4.0-1045-aws", "paravirtualization": true, "firmware": "BIOS", "has_rsync": true, "boot_loader": "GRUB", "disks": [], "volume_groups": [], "btrfs_list": [], "cpu_quantity": 1, "memory": 1026101248, "networks": [{"name": "eth0", "ip": "172.31.26.6", "mac": "32eda4824f5e8d1bc25f8952d03ddd98f00ab73bd263b4400bc19cc6b8934334"}], "ip": "172.31.26.6", "agent_version": "3.0.3", "enterprise_project_id": "0"}
+2021-09-13T03:39:35.876+00:00 - INFO - heart_beat_monitor - sms_heartbeat_monitor.py - run - [line:46] - upload successful
+2021-09-13T03:39:57.406+00:00 - INFO - agent_ctrl_daemon - agentcliserver.py - _linux_daemon_thread - [line:125] - received a cli client!
+2021-09-13T03:39:57.407+00:00 - INFO - Thread-3 - agentcliserver.py - run - [line:35] - receive cli client cmd: status
+2021-09-13T03:40:21.516+00:00 - INFO - MainThread - sms_agent_cmd.py - <module> - [line:341] - start agent....
+2021-09-13T03:40:21.541+00:00 - INFO - MainThread - sms_agent_cmd.py - _manual_start - [line:158] - agent will start by manual
+2021-09-13T03:40:21.541+00:00 - INFO - MainThread - sms_agent_cmd.py - _manual_start - [line:160] - start to verify as/sk from sms
+2021-09-13T03:40:22.696+00:00 - INFO - MainThread - sms_agent_cmd.py - _manual_start - [line:162] - verify as/sk from sms result: True
+2021-09-13T03:40:22.697+00:00 - INFO - MainThread - taskutil.py - get_system_info - [line:48] - start to collect os info
+2021-09-13T03:40:22.699+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:['bash', 'linux/resources/shell/get_os_info.sh', 'os']
+2021-09-13T03:40:22.862+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:['bash', 'linux/resources/shell/get_os_info.sh', 'os']
+2021-09-13T03:40:22.863+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_os_version - [line:64] - os version:UBUNTU_20_4_64BIT
+2021-09-13T03:40:22.863+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:['uname', '-r']
+2021-09-13T03:40:22.866+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:['uname', '-r']
+2021-09-13T03:40:22.868+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_kernel_version - [line:84] - linux_block_check kernel version:5.4.0-1045-aws
+2021-09-13T03:40:22.868+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_virtualization_type - [line:94] - virtualization type:HVM
+2021-09-13T03:40:22.868+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:['df', '-THP']
+2021-09-13T03:40:22.871+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:['df', '-THP']
+2021-09-13T03:40:22.872+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_firmware - [line:116] - system is booted with bios!
+2021-09-13T03:40:22.875+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_raw_devices - [line:127] - failed to get raw devcie info
+2021-09-13T03:40:22.875+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:['rsync', '--version']
+2021-09-13T03:40:22.878+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:['rsync', '--version']
+2021-09-13T03:40:22.879+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_rsync - [line:145] - rsync exist
+2021-09-13T03:40:22.883+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_boot_loader - [line:150] - boot loader:GRUB
+2021-09-13T03:40:22.883+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:bash linux/resources/shell/get_disk_info.sh
+2021-09-13T03:40:23.288+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:bash linux/resources/shell/get_disk_info.sh
+2021-09-13T03:40:23.289+00:00 - INFO - MainThread - linux_disk_parser.py - parse_disk_info - [line:46] - disk info:
+ <DISK_INFO> /dev/xvda:8388608:MBR<DISK_INFO>
+<VOL_INFO> /dev/xvda1:8387567:ext4<VOL_INFO>
+<PV_INFO><PV_INFO>
+<VG_INFO><VG_INFO>
+<LV_INFO><LV_INFO>
+<VOL_MAP_INFO> /dev/xvda=/dev/xvda1<VOL_MAP_INFO>
+<BTRFS_INFO><BTRFS_INFO>
+<SUB_INFO><SUB_INFO>
+
+2021-09-13T03:40:23.289+00:00 - INFO - MainThread - linux_disk_parser.py - _filter_disk_list - [line:365] - Disk /dev/xvda is filtered out for no vol is used
+2021-09-13T03:40:23.290+00:00 - INFO - MainThread - linux_disk_parser.py - _find_system_disk_name - [line:434] - system disk:None
+2021-09-13T03:40:23.291+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:cat /proc/cpuinfo| grep "processor"
+2021-09-13T03:40:23.296+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:cat /proc/cpuinfo| grep "processor"
+2021-09-13T03:40:23.296+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_cpu_info - [line:221] - cpu_quantity:1
+2021-09-13T03:40:23.297+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:cat /proc/meminfo|grep -i MemTotal
+2021-09-13T03:40:23.301+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:cat /proc/meminfo|grep -i MemTotal
+2021-09-13T03:40:23.302+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_memory_info - [line:240] - memory size:1026101248
+2021-09-13T03:40:23.302+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_network_info - [line:262] - routingNicMacAddr 02-AA-86-0B-BD-66
+2021-09-13T03:40:23.302+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_network_info - [line:266] - hash routingNicMacAddr 32eda4824f5e8d1bc25f8952d03ddd98f00ab73bd263b4400bc19cc6b8934334
+2021-09-13T03:40:23.303+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_network_info - [line:272] - mac: 32eda4824f5e8d1bc25f8952d03ddd98f00ab73bd263b4400bc19cc6b8934334
+2021-09-13T03:40:23.303+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:bash linux/resources/shell/check_grub.sh
+2021-09-13T03:40:23.332+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:bash linux/resources/shell/check_grub.sh
+2021-09-13T03:40:23.333+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:ssh -V
+2021-09-13T03:40:23.340+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:ssh -V
+2021-09-13T03:40:23.340+00:00 - INFO - MainThread - taskutil.py - get_system_info - [line:60] - successfully collect os info:{"os_type": "LINUX", "name": "ip-172-31-26-6", "os_version": "UBUNTU_20_4_64BIT", "linux_block_check": "5.4.0-1045-aws", "support_linux_block": false, "kernel_version": "5.4.0-1045-aws", "paravirtualization": true, "firmware": "BIOS", "has_rsync": true, "boot_loader": "GRUB", "disks": [], "volume_groups": [], "btrfs_list": [], "cpu_quantity": 1, "memory": 1026101248, "networks": [{"name": "eth0", "ip": "172.31.26.6", "mac": "32eda4824f5e8d1bc25f8952d03ddd98f00ab73bd263b4400bc19cc6b8934334"}], "ip": "172.31.26.6", "agent_version": "3.0.3", "enterprise_project_id": "0"}
+2021-09-13T03:40:23.341+00:00 - INFO - MainThread - OpenStackPlatformManager.py - upload_source_info - [line:530] - start to upload os info
+2021-09-13T03:40:24.264+00:00 - INFO - MainThread - OpenStackPlatformManager.py - upload_source_info - [line:544] - successfully upload os info, source_id: 18b02df1-8791-408c-b455-67c7957ab1e3
+2021-09-13T03:40:24.265+00:00 - INFO - MainThread - sms_heartbeat.py - _start_schedule_task - [line:54] - start schedule task which gets command from SMS
+2021-09-13T03:40:24.266+00:00 - INFO - heart_beat_monitor - sms_heartbeat_monitor.py - run - [line:28] - start heart beat monitor thread
+2021-09-13T03:40:24.267+00:00 - INFO - heart_beat_monitor - sms_heartbeat_monitor.py - run - [line:38] - heart beat monitor has count to: 0
+2021-09-13T03:40:24.268+00:00 - INFO - agent_ctrl_daemon - agentcliserver.py - _linux_daemon_thread - [line:120] - start agent control daemon thread
+2021-09-13T03:50:24.364+00:00 - INFO - heart_beat_monitor - sms_heartbeat_monitor.py - run - [line:38] - heart beat monitor has count to: 1
+2021-09-13T03:50:24.364+00:00 - INFO - heart_beat_monitor - sms_heartbeat_monitor.py - run - [line:41] - heart beat monitor has count to: 1
+2021-09-13T03:50:24.365+00:00 - INFO - heart_beat_monitor - taskutil.py - get_system_info - [line:48] - start to collect os info
+2021-09-13T03:50:24.365+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:['bash', 'linux/resources/shell/get_os_info.sh', 'os']
+2021-09-13T03:50:24.707+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:['bash', 'linux/resources/shell/get_os_info.sh', 'os']
+2021-09-13T03:50:24.708+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_os_version - [line:64] - os version:UBUNTU_20_4_64BIT
+2021-09-13T03:50:24.708+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:['uname', '-r']
+2021-09-13T03:50:24.713+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:['uname', '-r']
+2021-09-13T03:50:24.715+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_kernel_version - [line:84] - linux_block_check kernel version:5.4.0-1045-aws
+2021-09-13T03:50:24.715+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_virtualization_type - [line:94] - virtualization type:HVM
+2021-09-13T03:50:24.715+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:['df', '-THP']
+2021-09-13T03:50:24.722+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:['df', '-THP']
+2021-09-13T03:50:24.723+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_firmware - [line:116] - system is booted with bios!
+2021-09-13T03:50:24.727+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_raw_devices - [line:127] - failed to get raw devcie info
+2021-09-13T03:50:24.728+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:['rsync', '--version']
+2021-09-13T03:50:24.732+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:['rsync', '--version']
+2021-09-13T03:50:24.732+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_rsync - [line:145] - rsync exist
+2021-09-13T03:50:24.738+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_boot_loader - [line:150] - boot loader:GRUB
+2021-09-13T03:50:24.738+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:bash linux/resources/shell/get_disk_info.sh
+2021-09-13T03:50:25.649+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:bash linux/resources/shell/get_disk_info.sh
+2021-09-13T03:50:25.649+00:00 - INFO - heart_beat_monitor - linux_disk_parser.py - parse_disk_info - [line:46] - disk info:
+ <DISK_INFO> /dev/xvda:8388608:MBR<DISK_INFO>
+<VOL_INFO> /dev/xvda1:8387567:ext4<VOL_INFO>
+<PV_INFO><PV_INFO>
+<VG_INFO><VG_INFO>
+<LV_INFO><LV_INFO>
+<VOL_MAP_INFO> /dev/xvda=/dev/xvda1<VOL_MAP_INFO>
+<BTRFS_INFO><BTRFS_INFO>
+<SUB_INFO><SUB_INFO>
+
+2021-09-13T03:50:25.650+00:00 - INFO - heart_beat_monitor - linux_disk_parser.py - _filter_disk_list - [line:365] - Disk /dev/xvda is filtered out for no vol is used
+2021-09-13T03:50:25.650+00:00 - INFO - heart_beat_monitor - linux_disk_parser.py - _find_system_disk_name - [line:434] - system disk:None
+2021-09-13T03:50:25.650+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:cat /proc/cpuinfo| grep "processor"
+2021-09-13T03:50:25.668+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:cat /proc/cpuinfo| grep "processor"
+2021-09-13T03:50:25.669+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_cpu_info - [line:221] - cpu_quantity:1
+2021-09-13T03:50:25.669+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:cat /proc/meminfo|grep -i MemTotal
+2021-09-13T03:50:25.696+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:cat /proc/meminfo|grep -i MemTotal
+2021-09-13T03:50:25.697+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_memory_info - [line:240] - memory size:1026101248
+2021-09-13T03:50:25.697+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_network_info - [line:262] - routingNicMacAddr 02-AA-86-0B-BD-66
+2021-09-13T03:50:25.697+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_network_info - [line:266] - hash routingNicMacAddr 32eda4824f5e8d1bc25f8952d03ddd98f00ab73bd263b4400bc19cc6b8934334
+2021-09-13T03:50:25.698+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_network_info - [line:272] - mac: 32eda4824f5e8d1bc25f8952d03ddd98f00ab73bd263b4400bc19cc6b8934334
+2021-09-13T03:50:25.698+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:bash linux/resources/shell/check_grub.sh
+2021-09-13T03:50:25.817+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:bash linux/resources/shell/check_grub.sh
+2021-09-13T03:50:25.818+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:ssh -V
+2021-09-13T03:50:25.836+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:ssh -V
+2021-09-13T03:50:25.837+00:00 - INFO - heart_beat_monitor - taskutil.py - get_system_info - [line:60] - successfully collect os info:{"os_type": "LINUX", "name": "ip-172-31-26-6", "os_version": "UBUNTU_20_4_64BIT", "linux_block_check": "5.4.0-1045-aws", "support_linux_block": false, "kernel_version": "5.4.0-1045-aws", "paravirtualization": true, "firmware": "BIOS", "has_rsync": true, "boot_loader": "GRUB", "disks": [], "volume_groups": [], "btrfs_list": [], "cpu_quantity": 1, "memory": 1026101248, "networks": [{"name": "eth0", "ip": "172.31.26.6", "mac": "32eda4824f5e8d1bc25f8952d03ddd98f00ab73bd263b4400bc19cc6b8934334"}], "ip": "172.31.26.6", "agent_version": "3.0.3", "enterprise_project_id": "0"}
+2021-09-13T03:50:26.194+00:00 - INFO - heart_beat_monitor - sms_heartbeat_monitor.py - run - [line:46] - upload successful
+2021-09-13T03:53:22.106+00:00 - INFO - agent_ctrl_daemon - agentcliserver.py - _linux_daemon_thread - [line:125] - received a cli client!
+2021-09-13T03:53:22.106+00:00 - INFO - Thread-3 - agentcliserver.py - run - [line:35] - receive cli client cmd: status
+2021-09-13T03:53:22.111+00:00 - ERROR - Thread-3 - agentcliserver.py - run - [line:58] - a cli client exist
+Traceback (most recent call last):
+  File "sms/view/cli/agentcliserver.py", line 56, in run
+BrokenPipeError: [Errno 32] Broken pipe
+2021-09-13T03:53:57.960+00:00 - INFO - MainThread - sms_agent_cmd.py - <module> - [line:341] - start agent....
+2021-09-13T03:53:57.984+00:00 - INFO - MainThread - sms_agent_cmd.py - _manual_start - [line:158] - agent will start by manual
+2021-09-13T03:53:57.985+00:00 - INFO - MainThread - sms_agent_cmd.py - _manual_start - [line:160] - start to verify as/sk from sms
+2021-09-13T03:53:58.605+00:00 - INFO - MainThread - sms_agent_cmd.py - _manual_start - [line:162] - verify as/sk from sms result: True
+2021-09-13T03:53:58.606+00:00 - INFO - MainThread - taskutil.py - get_system_info - [line:48] - start to collect os info
+2021-09-13T03:53:58.609+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:['bash', 'linux/resources/shell/get_os_info.sh', 'os']
+2021-09-13T03:53:58.775+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:['bash', 'linux/resources/shell/get_os_info.sh', 'os']
+2021-09-13T03:53:58.776+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_os_version - [line:64] - os version:UBUNTU_20_4_64BIT
+2021-09-13T03:53:58.776+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:['uname', '-r']
+2021-09-13T03:53:58.779+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:['uname', '-r']
+2021-09-13T03:53:58.780+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_kernel_version - [line:84] - linux_block_check kernel version:5.4.0-1045-aws
+2021-09-13T03:53:58.781+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_virtualization_type - [line:94] - virtualization type:HVM
+2021-09-13T03:53:58.781+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:['df', '-THP']
+2021-09-13T03:53:58.784+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:['df', '-THP']
+2021-09-13T03:53:58.785+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_firmware - [line:116] - system is booted with bios!
+2021-09-13T03:53:58.788+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_raw_devices - [line:127] - failed to get raw devcie info
+2021-09-13T03:53:58.789+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:['rsync', '--version']
+2021-09-13T03:53:58.793+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:['rsync', '--version']
+2021-09-13T03:53:58.794+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_rsync - [line:145] - rsync exist
+2021-09-13T03:53:58.797+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_boot_loader - [line:150] - boot loader:GRUB
+2021-09-13T03:53:58.798+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:bash linux/resources/shell/get_disk_info.sh
+2021-09-13T03:53:59.224+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:bash linux/resources/shell/get_disk_info.sh
+2021-09-13T03:53:59.224+00:00 - INFO - MainThread - linux_disk_parser.py - parse_disk_info - [line:46] - disk info:
+ <DISK_INFO> /dev/xvda:8388608:MBR<DISK_INFO>
+<VOL_INFO> /dev/xvda1:8387567:ext4<VOL_INFO>
+<PV_INFO><PV_INFO>
+<VG_INFO><VG_INFO>
+<LV_INFO><LV_INFO>
+<VOL_MAP_INFO> /dev/xvda=/dev/xvda1<VOL_MAP_INFO>
+<BTRFS_INFO><BTRFS_INFO>
+<SUB_INFO><SUB_INFO>
+
+2021-09-13T03:53:59.225+00:00 - INFO - MainThread - linux_disk_parser.py - _filter_disk_list - [line:365] - Disk /dev/xvda is filtered out for no vol is used
+2021-09-13T03:53:59.225+00:00 - INFO - MainThread - linux_disk_parser.py - _find_system_disk_name - [line:434] - system disk:None
+2021-09-13T03:53:59.226+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:cat /proc/cpuinfo| grep "processor"
+2021-09-13T03:53:59.231+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:cat /proc/cpuinfo| grep "processor"
+2021-09-13T03:53:59.231+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_cpu_info - [line:221] - cpu_quantity:1
+2021-09-13T03:53:59.232+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:cat /proc/meminfo|grep -i MemTotal
+2021-09-13T03:53:59.236+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:cat /proc/meminfo|grep -i MemTotal
+2021-09-13T03:53:59.237+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_memory_info - [line:240] - memory size:1026101248
+2021-09-13T03:53:59.237+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_network_info - [line:262] - routingNicMacAddr 02-AA-86-0B-BD-66
+2021-09-13T03:53:59.238+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_network_info - [line:266] - hash routingNicMacAddr 32eda4824f5e8d1bc25f8952d03ddd98f00ab73bd263b4400bc19cc6b8934334
+2021-09-13T03:53:59.238+00:00 - INFO - MainThread - linux_source_info_collector.py - _get_network_info - [line:272] - mac: 32eda4824f5e8d1bc25f8952d03ddd98f00ab73bd263b4400bc19cc6b8934334
+2021-09-13T03:53:59.239+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:bash linux/resources/shell/check_grub.sh
+2021-09-13T03:53:59.269+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:bash linux/resources/shell/check_grub.sh
+2021-09-13T03:53:59.270+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:33] - start to execute command:ssh -V
+2021-09-13T03:53:59.277+00:00 - INFO - MainThread - localshell.py - execute_cmd - [line:56] - success to execute command:ssh -V
+2021-09-13T03:53:59.278+00:00 - INFO - MainThread - taskutil.py - get_system_info - [line:60] - successfully collect os info:{"os_type": "LINUX", "name": "ip-172-31-26-6", "os_version": "UBUNTU_20_4_64BIT", "linux_block_check": "5.4.0-1045-aws", "support_linux_block": false, "kernel_version": "5.4.0-1045-aws", "paravirtualization": true, "firmware": "BIOS", "has_rsync": true, "boot_loader": "GRUB", "disks": [], "volume_groups": [], "btrfs_list": [], "cpu_quantity": 1, "memory": 1026101248, "networks": [{"name": "eth0", "ip": "172.31.26.6", "mac": "32eda4824f5e8d1bc25f8952d03ddd98f00ab73bd263b4400bc19cc6b8934334"}], "ip": "172.31.26.6", "agent_version": "3.0.3", "enterprise_project_id": "0"}
+2021-09-13T03:53:59.278+00:00 - INFO - MainThread - OpenStackPlatformManager.py - upload_source_info - [line:530] - start to upload os info
+2021-09-13T03:54:03.198+00:00 - INFO - MainThread - OpenStackPlatformManager.py - upload_source_info - [line:544] - successfully upload os info, source_id: 18b02df1-8791-408c-b455-67c7957ab1e3
+2021-09-13T03:54:03.199+00:00 - INFO - MainThread - sms_heartbeat.py - _start_schedule_task - [line:54] - start schedule task which gets command from SMS
+2021-09-13T03:54:03.199+00:00 - INFO - heart_beat_monitor - sms_heartbeat_monitor.py - run - [line:28] - start heart beat monitor thread
+2021-09-13T03:54:03.200+00:00 - INFO - heart_beat_monitor - sms_heartbeat_monitor.py - run - [line:38] - heart beat monitor has count to: 0
+2021-09-13T03:54:03.201+00:00 - INFO - agent_ctrl_daemon - agentcliserver.py - _linux_daemon_thread - [line:120] - start agent control daemon thread
+2021-09-13T04:04:03.292+00:00 - INFO - heart_beat_monitor - sms_heartbeat_monitor.py - run - [line:38] - heart beat monitor has count to: 1
+2021-09-13T04:04:03.293+00:00 - INFO - heart_beat_monitor - sms_heartbeat_monitor.py - run - [line:41] - heart beat monitor has count to: 1
+2021-09-13T04:04:03.293+00:00 - INFO - heart_beat_monitor - taskutil.py - get_system_info - [line:48] - start to collect os info
+2021-09-13T04:04:03.293+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:['bash', 'linux/resources/shell/get_os_info.sh', 'os']
+2021-09-13T04:04:03.460+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:['bash', 'linux/resources/shell/get_os_info.sh', 'os']
+2021-09-13T04:04:03.460+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_os_version - [line:64] - os version:UBUNTU_20_4_64BIT
+2021-09-13T04:04:03.460+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:['uname', '-r']
+2021-09-13T04:04:03.464+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:['uname', '-r']
+2021-09-13T04:04:03.465+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_kernel_version - [line:84] - linux_block_check kernel version:5.4.0-1045-aws
+2021-09-13T04:04:03.465+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_virtualization_type - [line:94] - virtualization type:HVM
+2021-09-13T04:04:03.466+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:['df', '-THP']
+2021-09-13T04:04:03.469+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:['df', '-THP']
+2021-09-13T04:04:03.469+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_firmware - [line:116] - system is booted with bios!
+2021-09-13T04:04:03.472+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_raw_devices - [line:127] - failed to get raw devcie info
+2021-09-13T04:04:03.473+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:['rsync', '--version']
+2021-09-13T04:04:03.476+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:['rsync', '--version']
+2021-09-13T04:04:03.477+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_rsync - [line:145] - rsync exist
+2021-09-13T04:04:03.481+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_boot_loader - [line:150] - boot loader:GRUB
+2021-09-13T04:04:03.481+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:bash linux/resources/shell/get_disk_info.sh
+2021-09-13T04:04:03.897+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:bash linux/resources/shell/get_disk_info.sh
+2021-09-13T04:04:03.898+00:00 - INFO - heart_beat_monitor - linux_disk_parser.py - parse_disk_info - [line:46] - disk info:
+ <DISK_INFO> /dev/xvda:8388608:MBR<DISK_INFO>
+<VOL_INFO> /dev/xvda1:8387567:ext4<VOL_INFO>
+<PV_INFO><PV_INFO>
+<VG_INFO><VG_INFO>
+<LV_INFO><LV_INFO>
+<VOL_MAP_INFO> /dev/xvda=/dev/xvda1<VOL_MAP_INFO>
+<BTRFS_INFO><BTRFS_INFO>
+<SUB_INFO><SUB_INFO>
+
+2021-09-13T04:04:03.898+00:00 - INFO - heart_beat_monitor - linux_disk_parser.py - _filter_disk_list - [line:365] - Disk /dev/xvda is filtered out for no vol is used
+2021-09-13T04:04:03.898+00:00 - INFO - heart_beat_monitor - linux_disk_parser.py - _find_system_disk_name - [line:434] - system disk:None
+2021-09-13T04:04:03.898+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:cat /proc/cpuinfo| grep "processor"
+2021-09-13T04:04:03.903+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:cat /proc/cpuinfo| grep "processor"
+2021-09-13T04:04:03.904+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_cpu_info - [line:221] - cpu_quantity:1
+2021-09-13T04:04:03.904+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:cat /proc/meminfo|grep -i MemTotal
+2021-09-13T04:04:03.909+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:cat /proc/meminfo|grep -i MemTotal
+2021-09-13T04:04:03.909+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_memory_info - [line:240] - memory size:1026101248
+2021-09-13T04:04:03.910+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_network_info - [line:262] - routingNicMacAddr 02-AA-86-0B-BD-66
+2021-09-13T04:04:03.910+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_network_info - [line:266] - hash routingNicMacAddr 32eda4824f5e8d1bc25f8952d03ddd98f00ab73bd263b4400bc19cc6b8934334
+2021-09-13T04:04:03.910+00:00 - INFO - heart_beat_monitor - linux_source_info_collector.py - _get_network_info - [line:272] - mac: 32eda4824f5e8d1bc25f8952d03ddd98f00ab73bd263b4400bc19cc6b8934334
+2021-09-13T04:04:03.911+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:bash linux/resources/shell/check_grub.sh
+2021-09-13T04:04:03.940+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:bash linux/resources/shell/check_grub.sh
+2021-09-13T04:04:03.941+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:33] - start to execute command:ssh -V
+2021-09-13T04:04:03.947+00:00 - INFO - heart_beat_monitor - localshell.py - execute_cmd - [line:56] - success to execute command:ssh -V
+2021-09-13T04:04:03.948+00:00 - INFO - heart_beat_monitor - taskutil.py - get_system_info - [line:60] - successfully collect os info:{"os_type": "LINUX", "name": "ip-172-31-26-6", "os_version": "UBUNTU_20_4_64BIT", "linux_block_check": "5.4.0-1045-aws", "support_linux_block": false, "kernel_version": "5.4.0-1045-aws", "paravirtualization": true, "firmware": "BIOS", "has_rsync": true, "boot_loader": "GRUB", "disks": [], "volume_groups": [], "btrfs_list": [], "cpu_quantity": 1, "memory": 1026101248, "networks": [{"name": "eth0", "ip": "172.31.26.6", "mac": "32eda4824f5e8d1bc25f8952d03ddd98f00ab73bd263b4400bc19cc6b8934334"}], "ip": "172.31.26.6", "agent_version": "3.0.3", "enterprise_project_id": "0"}
+2021-09-13T04:04:04.336+00:00 - INFO - heart_beat_monitor - sms_heartbeat_monitor.py - run - [line:46] - upload successful
